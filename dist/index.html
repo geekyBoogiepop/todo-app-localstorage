@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal To-Do</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="h-screen bg-wewak-50">
+    <nav>
+      <div class="flex justify-between items-center px-4 pt-4 pb-3 bg-wewak-200 relative">
+        <section>
+          <a href="#">
+            <img src="./img/card-checklist.svg" alt="To-Do Logo" class="w-12">
+          </a>
+        </section>
+
+        <section class="flex space-x-4 items-center">
+          <h2 class="username hidden sm:block text-xl text-wewak-700 font-bold">Fuka Miyazawa</h2>
+          <img id="profile-picture" src="./img/default-fuka.jpg" alt="User profile picture" class="w-12 object-cover rounded-full cursor-pointer">
+        </section>
+
+        <div id="user-menu" class="absolute px-8 py-4 bg-slate-100 rounded-md drop-shadow-lg right-2 top-[4rem] flex-col items-center transition-all scale-0 opacity-0 duration-100 origin-top">
+          <h2 class="username sm:hidden text-xl text-wewak-700 font-bold">Fuka Miyazawa</h2>
+          <button id="log-out" type="button" class="bg-wewak-600 py-3 px-6 rounded-lg text-white hover:opacity-90 transition-opacity ease-in-out duration-300 mt-4">Log out</button>
+        </div>
+
+        <!-- <div id="user-menu" class="absolute hidden px-8 py-4 bg-slate-100 rounded-md drop-shadow-lg right-2 top-[4rem] flex-col items-center transition-all duration-500">
+          <h2 class="username sm:hidden text-xl text-wewak-700 font-bold">Fuka Miyazawa</h2>
+          <button id="log-out" type="button" class="bg-wewak-600 py-3 px-6 rounded-lg text-white hover:opacity-90 transition-opacity ease-in-out duration-300 mt-4">Log out</button>
+        </div> -->
+      </div>
+    </nav>
+
+
+    <main>
+      <section class="container mx-auto pb-20">
+        <h1 class="text-center text-5xl pt-20">My Tasks</h1>
+
+        <!-- New Task Form -->
+        <form action="" class="flex flex-col items-center mt-10 space-y-3">
+          <input type="text" name="new-task" id="new-task" class="w-11/12 sm:w-full p-3 text-xl text-wewak-950 focus:outline-wewak-800 rounded-md font-bold" placeholder="Add a new task" required>
+          <button id="save-task" type="button" class="bg-wewak-600 py-3 px-6 rounded-lg text-white hover:opacity-90 transition-opacity ease-in-out duration-300">Save</button>
+
+        </form>
+
+        <section id="my-tasks" class="px-6 sm:px-0 flex flex-col mt-10 space-y-6 justify-center">
+          <!-- Tasks -->
+          <!-- <div class="bg-wewak-500 flex justify-between items-center rounded-lg p-6">
+            <h3 class="text-2xl text-wewak-50">Some task I plan to do in the day.</h3> -->
+
+            <!-- Actions -->
+            <!-- <div class="flex justify-between space-x-3">
+              <img src="./img/trash3-fill.svg" alt="Delete task" class="w-8 cursor-pointer hover:opacity-50 transition-opacity ease-in-out duration-200">
+              <img src="./img/circle.svg" alt="Finish Task" class="w-8 cursor-pointer hover:opacity-50 transition-opacity ease-in-out duration-200">
+            </div>
+          </div> -->
+
+
+        </section>
+      </section>
+    </main>
+
+    <script src="./js/main.js" defer></script>
+</body>
+
+</html>
