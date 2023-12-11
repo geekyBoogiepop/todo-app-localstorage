@@ -10,18 +10,13 @@ const initApp = () => {
   function showTask(paramTask) {
     let taskObject;
 
-    console.log(paramTask);
+    // console.log(paramTask);
 
     if (paramTask) {
       taskObject = paramTask;
-      console.log("param");
     } else {
       const myTask = document.getElementById("new-task");
       const task = myTask.value;
-
-      console.log("hello");
-      console.log(myTask);
-      console.log(task);
 
       if (task) {
         taskObject = {
@@ -36,7 +31,7 @@ const initApp = () => {
       }
     }
 
-    console.log(taskObject);
+    // console.log(taskObject);
 
     if (taskObject) {
       const newTask = document.createElement("div");
@@ -56,9 +51,10 @@ const initApp = () => {
 
       deleteTask.addEventListener("click", (e) => {
         const taskId = e.target.parentElement.nextElementSibling.value;
-        const newTasks = myTasks.filter(task => task.id != taskId);
-        // console.log(newTasks);
-        saveTasksToLocalStorage(newTasks);
+        console.log(taskId);
+        myTasks = myTasks.filter(task => task.id != taskId);
+        console.log(myTasks);
+        saveTasksToLocalStorage(myTasks);
         e.target.parentElement.parentElement.remove();
       });
 
